@@ -21,6 +21,22 @@
   },
   "homepage": "https://github.com/chartzoge/gaston#readme",
   "devDependencies": {
-    "eslint": "^4.8.0"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.8.0",
+    "webpack": "^3.6.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "jquery": "^3.2.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux-thunk": "^2.2.0"
   }
 }

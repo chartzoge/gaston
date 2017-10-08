@@ -45,6 +45,11 @@ functions:
   users:
     handler: handler.users
     description: Get the users
+    events:
+      - http: GET users
+      - http: POST users
+      - http: PUT users
+      - http: DELETE users
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
