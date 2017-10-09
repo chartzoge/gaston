@@ -1,6 +1,6 @@
 "use strict";
 
-window.ENV = __ENV__;
+window.ENV = __ENV__; //eslint-disable-line
 
 require("./libs");
 

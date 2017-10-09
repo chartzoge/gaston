@@ -1,6 +1,8 @@
 "use strict";
 
-module.exports = (event, context, callback) => {
+const Promise = require("bluebird");
+
+module.exports = (req) => {
     const response = {
         statusCode: 200,
         headers: {
@@ -8,9 +10,11 @@ module.exports = (event, context, callback) => {
             "Access-Control-Allow-Credentials" : true
         },
         body: JSON.stringify({
-            users: [{ name: "chase" }]
+            users: [{ name: "chase" }],
+            event: req.__event,
+            context: req.__context
         }),
     };
 
-    callback(null, response);
+    return Promise.resolve(response);
 };

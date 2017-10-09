@@ -5,7 +5,10 @@
   "main": "handler.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "./node_modules/.bin/webpack-dev-server"
+    "lint": "node_modules/.bin/eslint ./handler.js $(find server -name '*.js*') $(find client -name '*.js*')",
+    "start:dev": "./node_modules/.bin/webpack-dev-server",
+    "build": "webpack; aws s3 sync ./public s3://gaston-client-dev",
+    "deploy:all": "npm run build; serverless deploy"
   },
   "repository": {
     "type": "git",
@@ -29,6 +32,7 @@
     "babel-preset-react": "^6.24.1",
     "copy-webpack-plugin": "^4.1.1",
     "eslint": "^4.8.0",
+    "eslint-plugin-react": "^7.4.0",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1"
   },

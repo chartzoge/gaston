@@ -22,8 +22,8 @@ const ACTIONS = {
 
 export default (options = {}) => {
     return {
-        [`GET_${options.modelName}`](params) {
-            params = params || {};
+        [`GET_${options.modelName}`](args) {
+            const params = args || {};
 
             return (dispatch) => {
                 dispatch(ACTIONS.CALL_API());

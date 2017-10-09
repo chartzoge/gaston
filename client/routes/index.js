@@ -1,6 +1,6 @@
 "use strict";
 
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 
 import UsersRoute from "./users_route";
 

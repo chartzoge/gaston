@@ -11,12 +11,8 @@ export default class ApiManager {
                 method: params.method,
                 data: params.query || params.body
             })
-            .done((responseBody) => {
-                resolve(responseBody);
-            })
-            .fail((xhr, status, err) => {
-                reject(err);
-            });
+            .done((responseBody) => resolve(responseBody))
+            .fail((xhr, status, err) => reject(err));
         });
     }
 

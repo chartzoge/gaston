@@ -1,11 +1,5 @@
 {
     "extends": "eslint:recommended",
-    "globals:": {
-        "window": true,
-        "describe": true,
-        "it": true
-    },
-
     "plugins": ["react"],
 
     "env": {
@@ -29,7 +23,7 @@
         "dot-notation": "error",
         "eqeqeq": ["error", "always"],
         "guard-for-in": "error",
-        "indent": ["warn", 4],
+        "indent": ["warn", 4, { "MemberExpression": 0 }],
         "max-depth": ["error", 4],
         "max-nested-callbacks": ["error", {"max": 4 }],
         "no-alert": "error",

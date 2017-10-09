@@ -1,0 +1,73 @@
+{
+    "users": [
+        {
+            "name": "chase"
+        }
+    ],
+    "event": {
+        "resource": "/users",
+        "path": "/users",
+        "httpMethod": "POST",
+        "headers": {
+            "Accept": "*/*",
+            "Accept-Encoding": "gzip, deflate",
+            "cache-control": "no-cache",
+            "CloudFront-Forwarded-Proto": "https",
+            "CloudFront-Is-Desktop-Viewer": "true",
+            "CloudFront-Is-Mobile-Viewer": "false",
+            "CloudFront-Is-SmartTV-Viewer": "false",
+            "CloudFront-Is-Tablet-Viewer": "false",
+            "CloudFront-Viewer-Country": "US",
+            "Content-Type": "application/json",
+            "Host": "getdd8hoi9.execute-api.us-east-1.amazonaws.com",
+            "Postman-Token": "bc6d4065-5567-4567-b14d-2e3f22b94e21",
+            "User-Agent": "PostmanRuntime/6.1.6",
+            "Via": "1.1 d5da2738774b6f83465e13845679d084.cloudfront.net (CloudFront)",
+            "X-Amz-Cf-Id": "QkZGBJBHHqzTnXbXx1vGIzsbZHuoPtMeyhTe9Uh_UlqPjEXPHPRYWw==",
+            "X-Amzn-Trace-Id": "Root=1-59dacf6c-0eaf3968330d7c0c18aa4925",
+            "X-Forwarded-For": "96.234.173.222, 54.182.230.76",
+            "X-Forwarded-Port": "443",
+            "X-Forwarded-Proto": "https"
+        },
+        "queryStringParameters": null,
+        "pathParameters": null,
+        "stageVariables": null,
+        "requestContext": {
+            "path": "/dev/users",
+            "accountId": "479939836979",
+            "resourceId": "mdidd0",
+            "stage": "dev",
+            "requestId": "5ecd2466-ac90-11e7-b1e1-b37784b75382",
+            "identity": {
+                "cognitoIdentityPoolId": null,
+                "accountId": null,
+                "cognitoIdentityId": null,
+                "caller": null,
+                "apiKey": "",
+                "sourceIp": "96.234.173.222",
+                "accessKey": null,
+                "cognitoAuthenticationType": null,
+                "cognitoAuthenticationProvider": null,
+                "userArn": null,
+                "userAgent": "PostmanRuntime/6.1.6",
+                "user": null
+            },
+            "resourcePath": "/users",
+            "httpMethod": "POST",
+            "apiId": "getdd8hoi9"
+        },
+        "body": "{\"hello\": \"world\"}",
+        "isBase64Encoded": false
+    },
+    "context": {
+        "callbackWaitsForEmptyEventLoop": true,
+        "logGroupName": "/aws/lambda/gaston-dev-users",
+        "logStreamName": "2017/10/09/[$LATEST]36acf563179f40bca1ad787237722fac",
+        "functionName": "gaston-dev-users",
+        "memoryLimitInMB": "1024",
+        "functionVersion": "$LATEST",
+        "invokeid": "5ecd72e4-ac90-11e7-ae8e-bb0dec74d2aa",
+        "awsRequestId": "5ecd72e4-ac90-11e7-ae8e-bb0dec74d2aa",
+        "invokedFunctionArn": "arn:aws:lambda:us-east-1:479939836979:function:gaston-dev-users"
+    }
+}
