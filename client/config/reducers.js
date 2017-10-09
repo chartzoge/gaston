@@ -5,7 +5,7 @@ import { RECIEVE_DATA } from "./actions";
 const REDUCERS = {
     [RECIEVE_DATA]: (state, action) => {
         return Object.assign({}, state, {
-            [action.modelName]: action.payload
+            [action.modelName]: action.payload[action.modelName]
         });
     }
 };

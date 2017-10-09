@@ -2,18 +2,22 @@
 
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
+import UsersRoute from "./users_route";
+
 const App = () => {
     return (
         <div class="content-root">
-            <h1> Hello, {window.ENV.user.name}! </h1>
+            <h1> Hello, World! </h1>
+            <h2> Base config: {JSON.stringify(window.ENV)} </h2>
         </div>
     );
 };
 
 export default () => (
-    <Router basename={window.ENV.rootUri + "/"}>
-        <Switch>
-            <Route path="/" component={App} />
-        </Switch>
+    <Router>
+        <div>
+            <Route exact path="/" component={App} />
+            <Route path="/users" component={UsersRoute} />
+        </div>
     </Router>
 );

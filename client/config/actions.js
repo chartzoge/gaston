@@ -22,15 +22,17 @@ const ACTIONS = {
 
 export default (options = {}) => {
     return {
-        [`GET_${options.modelName}`](action) {
+        [`GET_${options.modelName}`](params) {
+            params = params || {};
+
             return (dispatch) => {
                 dispatch(ACTIONS.CALL_API());
 
                 const apiManager = new ApiManager();
 
                 return apiManager.get({
-                    url: `${window.ENV.rootUri}/${options.modelName}`,
-                    query: action.query
+                    url: `${window.ENV.baseLambdaUrl}/${options.modelName}`,
+                    query: params.query
                 })
                 .then(data => {
                     return dispatch(ACTIONS.API_RESPONSE(options.modelName, data));

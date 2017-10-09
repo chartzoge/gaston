@@ -46,10 +46,22 @@ functions:
     handler: handler.users
     description: Get the users
     events:
-      - http: GET users
-      - http: POST users
-      - http: PUT users
-      - http: DELETE users
+      - http:
+          path: users
+          method: GET
+          cors: true
+      - http:
+          path: users
+          method: POST
+          cors: true
+      - http:
+          path: users
+          method: PUT
+          cors: true
+      - http:
+          path: users
+          method: DELETE
+          cors: true
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events

@@ -1,6 +1,6 @@
 "use strict";
 
-window.ENV = JSON.parse(document.getElementById("datablock-env").innerHTML);
+window.ENV = __ENV__;
 
 require("./libs");
 
