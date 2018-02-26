@@ -42,6 +42,28 @@ export default (options = {}) => {
                     throw err;
                 });
             };
+        },
+
+        [`GET_BY_ID_${options.modelName}`](args) {
+            const params = args || {};
+
+            return (dispatch) => {
+                dispatch(ACTIONS.CALL_API());
+
+                const apiManager = new ApiManager();
+
+                return apiManager.get({
+                    url: `${window.ENV.baseLambdaUrl}/${options.modelName}/${params.id}`,
+                    query: params.query
+                })
+                .then(data => {
+                    return dispatch(ACTIONS.API_RESPONSE(options.modelName, data));
+                })
+                .catch(err => {
+                    window.console.error(err);
+                    throw err;
+                });
+            };
         }
     };
 };

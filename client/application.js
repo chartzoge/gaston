@@ -2,8 +2,8 @@
 
 window.ENV = __ENV__; //eslint-disable-line
 
-require("./libs");
-
+import "./libs";
+import "bootstrap/scss/bootstrap.scss";
 // add React to global namespace so you don't have to include React in every jsx view
 window.React = require("react");
 

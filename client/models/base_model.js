@@ -13,4 +13,8 @@ export default class BaseModel {
     findAll(actionOptions) {
         return this.actions[`GET_${this.modelName}`](actionOptions);
     }
+
+    findById (id) {
+        return this.actions[`GET_BY_ID_${this.modelName}`]({ id });
+    }
 }

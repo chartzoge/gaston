@@ -1,23 +1,16 @@
 "use strict";
 
 import { HashRouter as Router, Route } from "react-router-dom";
-
+import AppRoot from "./app_root";
 import UsersRoute from "./users_route";
-
-const App = () => {
-    return (
-        <div class="content-root">
-            <h1> Hello, World! </h1>
-            <h2> Base config: {JSON.stringify(window.ENV)} </h2>
-        </div>
-    );
-};
+import CompetitionRoute from "./compeition_route";
 
 export default () => (
     <Router>
         <div>
-            <Route exact path="/" component={App} />
+            <Route exact path="/" component={AppRoot} />
             <Route path="/users" component={UsersRoute} />
+            <Route path="/competitions/:id" component={CompetitionRoute} />
         </div>
     </Router>
 );

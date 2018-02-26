@@ -5,26 +5,31 @@ const webpack = require("webpack");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-    entry: './client/application.js',
-	output: {
-		filename: 'js/application.js',
-		path: path.resolve(__dirname, 'public')
-	},
+    entry: "./client/application.js",
+    output: {
+        filename: "js/application.js",
+        path: path.resolve(__dirname, "public")
+    },
     module: {
         rules: [{
             exclude: /(node_modules|bower_components)/,
             use: {
                 loader: "babel-loader"
             }
+        }, {
+            test: /\.scss$/,
+            use: [{
+                loader: "style-loader"
+            }, {
+                loader: "css-loader"
+            }, {
+                loader: "sass-loader"
+            }]
         }]
     },
     devtool: "source-map",
     resolve: {
-        extensions: [".js", ".jsx"],
-        alias: {
-            jquery: path.resolve(__dirname, "node_modules/jquery/dist/jquery.js"),
-            bootstrap: path.resolve(__dirname, "node_modules/bootstrap/dist/js/bootstrap.js")
-        }
+        extensions: [".js", ".jsx"]
     },
     plugins: [
         new webpack.DefinePlugin({
